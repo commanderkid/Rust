@@ -1,0 +1,12 @@
+fn main() {
+    println!("{}", fibonacci_element(8));
+}
+
+fn fibonacci_element(n : i32) -> i32
+{
+    let new_n : i32 = n;
+    if new_n <= 1 {
+        return 1;
+    }
+    fibonacci_element(new_n - 1) + fibonacci_element(new_n - 2)
+}
