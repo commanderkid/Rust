@@ -66,3 +66,30 @@ fn calculator_a_b(a: u32, b: u32) -> u32
     }
     k
 }
+
+// shen' 1.1.7
+
+fn main()
+{
+    let ans: (u32, u32) = finder(11, 5);
+    println!("q is {}, r is {}", ans.0, ans.1);
+}
+
+fn finder(a: u32, d: u32) -> (u32, u32)
+{
+    let mut r: u32 = a;
+    let mut q: u32 = 0;
+    loop
+    {
+        if r >= d
+        {
+            r = r - d;
+            q += 1
+        }
+        else
+        {
+            break;
+        }
+    }
+    (q, r)
+}
